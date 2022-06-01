@@ -43,5 +43,5 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"absy92_SonarTest2" /o:"absypalm" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-           Mdotnet build <C:\Users\abhilashd\source\repos\absy92\DotNet\PALMCalculate.cs>
+           Mdotnet build "C:\Users\abhilashd\source\repos\absy92\DotNet\PALMCalculate.cs"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
